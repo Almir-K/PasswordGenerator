@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" sizes="32x32" href="./images/techover-logo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+
+    <title>Lösenords Generator</title>
+    <h2>Password Generator</h2>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="password-input">
+        <input type="text" class="password" placeholder="Password" />
+        <button>
+          <img
+            class="copy-img"
+            src="../images/copy-icon.svg"
+            alt=""
+            id="copyButton"
+          />
+        </button>
+      </div>
+    </div>
+    <div class="box-container">
+      <div class="slider-container">
+        <div class="slider-labels">
+          <label for="characterSlider">Character Length:</label>
+          <span id="sliderValue">5</span>
+        </div>
+        <input type="range" id="characterSlider" min="0" max="18" value="5" />
+      </div>
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="includeUppercase" class="checkbox" />
+        <label for="includeUppercase">Include Uppercase Letters</label>
+      </div>
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="includeLowercase" class="checkbox" />
+        <label for="includeLowercase">Include Lowercase Letters</label>
+      </div>
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="includeNumbers" class="checkbox" />
+        <label for="includeNumbers">Include Numbers</label>
+      </div>
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="includeSymbols" class="checkbox" />
+        <label for="includeSymbols">Include Symbols</label>
+      </div>
+
+      <div class="symbol-strength">
+        <div class="symbol-label">Strength:</div>
+        <div class="strength-text"></div>
+        <div class="bars">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+
+      <button class="generator">Generate</button>
+    </div>
+    <div>
+      <img class="logo" src="../images/techover-logo.png" alt="" />
+    </div>
+    <div class="popup" id="popup">
+      <span class="popup-text">Copied!</span>
+    </div>
+  </body>
+</html>
