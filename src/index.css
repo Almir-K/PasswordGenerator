@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+:root {
+  --dark-bg-color: #202c36;
+  --article-color: #2b3844;
+  --text-color: #f2f2f2;
+  --light-mode-text: hsl(200, 15%, 8%);
+  --light-mode-input: hsl(0, 0%, 52%);
+  --light-mode-background: hsl(0, 0%, 98%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card {
+  border-radius: 5px;
+  overflow-y: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  text-decoration: none;
+}
+
+.card-link:focus,
+.card-link:active {
+  outline: none;
+}
+
+.card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.grid img {
+  border-radius: 5px 5px 0 0;
+}
+.card .details {
+  border-radius: 0 0 5px 5px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/*Body*/
+
+body {
+  /* padding: 20px; */
+  background-color: var(--dark-bg-color);
+  color: var(--text-color);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  transition: 0.5s ease;
+}
+
+body.light-theme {
+  background-color: #ececec;
+  color: var(--light-mode-text);
+}
+
+.btn-moon {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.btn-moon:hover {
+  transform: translateY(-3px);
+  transition: transform 0.3s ease;
+}
+
+/* Filter*/
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.filter .form-control {
+  width: 100%;
+}
+
+.filter .form-control input {
+  background-color: hsl(0, 0%, 98%);
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: inherit;
+  letter-spacing: 0.4px;
+  width: 100%;
+  margin: 0 0 30px;
+  color: var(--light-mode-input);
+}
+
+.filter .region-filter .select {
+  background-color: rgb(255, 255, 255);
+  text-align: hsl(0, 0%, 98%);
+  font-family: inherit;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.filter .form-control input::placeholder {
+  color: rgb(107, 107, 107, 34);
+}
+
+/*Gridd */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding: 20px;
+}
+
+.grid .details {
+  background-color: var(--light-mode-backgroun);
+  padding: 40px 20px;
+  margin-top: -25px;
+  color: var(--text-color);
+  border-radius: 0 0 5px 5px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.grid .details.light-theme {
+  background-color: var(--light-mode-background);
+  color: var(--light-mode-text);
+}
+
+.grid .details h3 {
+  padding-bottom: 10px;
+}
+
+.grid .details h4 {
+  padding-bottom: 5px;
+}
+
+.grid .details h4 span {
+  font-weight: 12;
+}
+
+.grid .details {
+  background-color: var(--article-color);
+  padding: 40px 20px;
+  margin-top: -25px;
+  color: var(--light-mode-backgroun);
+  border-radius: 0 0 5px 5px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.light-theme .grid .details {
+  background-color: var(--light-mode-background);
+  color: var(--light-mode-text);
+}
+
+.header.light-theme {
+  background-color: var(--light-mode-background);
+}
+
+.light-theme h1 {
+  color: black;
+}
+
+.header {
+  /* Existing styles for the header */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--article-color);
+  padding: 10px 10px;
+  transition: background-color 0.5s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+.back-btn {
+  color: var(--light-mode-background);
+  font-size: 20px;
+  margin-left: 20px;
+  margin-bottom: 55px;
+  text-decoration: none;
+}
+
+.back-btn.light-theme {
+  color: var(--light-mode-backgroun);
+}
+
+.back-btn img {
+  margin-right: 5px;
+  gap: 30px;
+}
+.back-text {
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.light-theme .back-btn {
+  color: var(--dark-bg-color);
+  transition: color 0.5s ease;
+}
+
+.back-icon {
+  color: var(--dark-bg-color);
+
+  transition: color 0.5s ease;
+  filter: invert(1);
+}
+
+.dark-mode .back-icon {
+  filter: inherit(0);
+}
+
+.header-title {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+@media (min-width: 640px) {
+  .filter .form-control {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .filter .form-control input {
+    width: auto;
+    margin: 0;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .filter {
+    flex-direction: row;
+  }
+
+  .filter .for-control {
+    width: auto;
+  }
+
+  .filter .for-control input {
+    width: auto;
+  }
+
+  .filter .region-filter {
+    width: auto;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1366px) {
+  .header,
+  .filter,
+  .grid {
+    padding: 30px 10px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+  }
+  .header h1 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .header h1 {
+    font-size: 12px;
+    padding: 10px 0;
+  }
+
+  .filter {
+    width: 100vw;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .form .select select {
+    width: 50vw;
+  }
+}
